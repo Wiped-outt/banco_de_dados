@@ -46,7 +46,7 @@ CREATE TABLE Produtos (
 
 ```sql
 
-ALTER TABLE produtos ADO fabricante_id INT NOT NULL
+ALTER TABLE produtos ADD fabricante_id INT NOT NULL
 AFTER quantidade;
 
 ```
