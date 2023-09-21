@@ -15,7 +15,6 @@ CREATE DATABASE filmes CHARACTER SET utf8mb4;
 CREATE TABLE Generos (
     id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(45) NOT NULL
-
     
 )
 
@@ -32,13 +31,20 @@ CREATE TABLE Filmes (
 
 )
 
+```
 
 ### Adicionar campo/colunas em uma tabela
+
+```sql
 
 ALTER TABLE filmes ADD genero_id INT NOT NULL
 AFTER lançamento;
 
+```
+
 ### Chave estrangeira
+
+```sql
 
 ALTER TABLE produtos
     # CONSTRAINT é uma restrição definida no relacionamento
@@ -47,6 +53,7 @@ ALTER TABLE produtos
     # A chave estrangeira deve fazer referencia a chave primaria
     FOREIGN KEY(fabricante_id) REFERENCES fabricantes(id)
 
+```
 
 ### Generos
 
