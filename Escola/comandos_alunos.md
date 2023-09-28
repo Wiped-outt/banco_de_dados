@@ -4,6 +4,7 @@
 ```sql
 
 -- 1ª Digitação (SQL para criar o Banco de dados)
+CREATE DATABASE tecdev_escola_seunome CHARACTER SET utf8mb4;
 
 ```
 <!-- ____________________________________________________________________ -->
@@ -11,7 +12,13 @@
 ```sql
 
 -- 2ª Digitação (SQL para criar a tabela Cursos)
+CREATE TABLE cursos (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    titulo VARCHAR(30) NOT NULL,
+    carga_horaria SMALLINT
 
+    
+)
 
 ```
 <!-- ____________________________________________________________________ -->
@@ -19,7 +26,12 @@
 ```sql
 
 -- 3ª Digitação (SQL para criar a tabela Professores)
-
+CREATE TABLE professores (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(50) NOT NULL,
+    area_de_atuacao ENUM('design','desenvolvimento','infra')
+    
+)
 
 ```
 <!-- ____________________________________________________________________ -->
@@ -27,7 +39,14 @@
 ```sql
 
 -- 4ª Digitação (SQL para criar a tabela Alunos)
-
+CREATE TABLE alunos (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(30) NOT NULL,
+    data_de_nascimento DATE,
+    primeira_nota DECIMAL(4,2),
+    segunda_nota DECIMAL(4,2)
+    
+)
 
 ```
 <!-- ____________________________________________________________________ -->
@@ -52,23 +71,23 @@ ALTER TABLE alunos
 INSERT INTO cursos (titulo, carga_horaria) VALUES(
     'Front-End',
     40
-    ),
-(
+    );
+INSERT INTO cursos (titulo, carga_horaria) VALUES(
     'Back-End',
     80
-    ),
-(
+    );
+INSERT INTO cursos (titulo, carga_horaria) VALUES(
     'UX/UI Design',
     30
-),
-(
+    );
+INSERT INTO cursos (titulo, carga_horaria) VALUES(
     'Figma',
     10
-),
-(
+    );
+INSERT INTO cursos (titulo, carga_horaria) VALUES(
     'Redes de Computadores',
     100
-);
+    );
 
 ```
 <!-- ____________________________________________________________________ -->
